@@ -128,8 +128,7 @@ def decrypt(key, ciphertext):
         plaintext += end_letter
     return plaintext
 
-# a = "BASE"
-# b = encrypt(20, a)
+# b = encrypt(1, "BASE")
 # print(b)
 #
-# print(decrypt(20, b))
+# print(decrypt(1, b))
