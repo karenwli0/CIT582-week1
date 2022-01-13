@@ -56,6 +56,7 @@ def encrypt(key, plaintext):
                   26: 'Z',
                   }
     ciphertext = ""
+    plaintext = plaintext.upper()
     for letter in plaintext:
         temp_num = alphabet_dic[letter]
         end_num = (temp_num + key) % 26
@@ -119,6 +120,7 @@ def decrypt(key, ciphertext):
                   26: 'Z',
                   }
     plaintext = ""
+    ciphertext = ciphertext.upper()
     for letter in ciphertext:
         temp_num = alphabet_dic[letter]
         end_num = (temp_num - key) % 26
@@ -126,3 +128,8 @@ def decrypt(key, ciphertext):
         plaintext += end_letter
     return plaintext
 
+# a = "BASE"
+# b = encrypt(20, a)
+# print(b)
+#
+# print(decrypt(20, b))
